@@ -26,7 +26,7 @@ public class PrincipalClienteDTO {
 		
 		//UP
 		//Clientes cliente1 =new Clientes(33,"Jose","Mena","1755378385",11,new Date(),"Calderon","jp@gmail.com","0968241486");
-		clienteService.up(39,"Jimmy","Pilco","1758629584",15,new Date(),"Calderon","0968241486","jp15@gmail.com");
+		clienteService.up(39,"Jim","Pilco","1758629584",15,new Date(),"Calderon","0968241486","jp15@gmail.com");
 		
 		
 		
