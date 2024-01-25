@@ -19,20 +19,24 @@ import org.springframework.stereotype.Component;
 @Entity
 @Table(name = "cliente")
 
+
+
 //# id_cliente, cedula, nombre, apellido, edad, fecha_nac, direccion, telefono, correo
 
 public class Clientes {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	
+	
 	@Column(name = "id_cliente")
 	private int idCliente;
+	@Column(name = "cedula")
+	private String cedula;
 	@Column(name = "nombre")
 	private String nombre;
 	@Column(name = "apellido")
 	private String apellido;
-	@Column(name = "cedula")
-	private String cedula;
 	@Column(name = "edad")
 	private int edad; // int 
 	@Column(name = "fecha_nac")
@@ -49,13 +53,14 @@ public class Clientes {
 	}
 	
 
-	public Clientes(int idCliente, String nombre, String apellido, String cedula, int edad, Date fechaNacimiento,
+	public Clientes(int idCliente,String cedula, String nombre, String apellido,  int edad, Date fechaNacimiento,
 			String direccion, String correo, String telefono) {
 		
 		this.idCliente = idCliente;
+		this.cedula = cedula;
 		this.nombre = nombre;
 		this.apellido = apellido;
-		this.cedula = cedula;
+		
 		this.edad = edad;
 		this.fechaNacimiento = fechaNacimiento;
 		this.direccion = direccion;
@@ -147,8 +152,8 @@ public class Clientes {
 
 	@Override
 	public String toString() {
-		return "Clientes [idCliente=" + idCliente + ", nombre=" + nombre + ", apellido=" + apellido + ", cedula="
-				+ cedula + ", edad=" + edad + ", fechaNacimiento=" + fechaNacimiento + ", direccion=" + direccion
+		return "Clientes [idCliente=" + idCliente + ",cedula="
+				+ cedula + ", nombre=" + nombre + ", apellido=" + apellido + ",  edad=" + edad + ", fechaNacimiento=" + fechaNacimiento + ", direccion=" + direccion
 				+ ", correo=" + correo + ", telefono=" + telefono + "]";
 	}
 
